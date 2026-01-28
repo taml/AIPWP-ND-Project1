@@ -1,0 +1,26 @@
+Question 1: Describe the data that you see.
+What are the columns, what data types do you see, and how are the reviews structured?
+
+The data structure consists of a number of columns.
+These columns include an index (which is unlabled), a rating, title, text, images, asin, parent_asin, user_id, timestamp, helpful_vote and verified_purchase.
+The data type varies from intigers, to decimals/floats, text, arrays (both empty and containing dictionaries or JSON) and boolean values.
+Not all of the data is visible in the table, a large number of rows are truncated from view but what's visible gives a good idea of the typical data.
+The reviews are structured by splitting key information into different columns such as title, rating and text.
+This should ultimately make it easier to filter based on reviews with a certain rating or reviews with a specific keyword in the title.
+
+
+Question 2: What do you think of this output above - was this what you expected? Why or why not?
+
+The plain text version of the DataFrame is largely as I expected it to be.
+Although, I was expecting to see the same number of rows as depicted in the HTML version, around 10 rows instead of 5.
+I was also expecting the structure to perhaps use characters such as | or _ to group data and rows and for each row to be on the same line,
+rather than broken across multiple new lines.
+
+
+Question 3: Describe what we did to the pandas DataFrame in order to change how the outputs are reflected.
+
+To change how the DataFrame is output a few options were configured.
+A max_columns option was configured which makes sure all data columns are displayed.
+A width option, which provides more or less space for columns depending on the value used and a max_colwidth option which sets the width of columns and can make them bigger or smaller depending on preference.
+After making these configuration changes the data now fits within the output container, with a little overlapping between columns.
+Now also instead of seeing 5 rows, 10 rows are displayed.
