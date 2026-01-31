@@ -1,67 +1,11 @@
-Question 1: Describe the data that you see.
-What are the columns, what data types do you see, and how are the reviews structured?
+Transformational AI: Analyzing Ecommerce Large Datasets for Machine Learning
+Completed by: Tamsin L
+—————————————-
 
-The data structure consists of a number of columns.
-These columns include an index (which is unlabled), a rating, title, text, images, asin, parent_asin, user_id, timestamp, helpful_vote and verified_purchase.
-The data type varies from intigers, to decimals/floats, text, arrays (both empty and containing dictionaries or JSON) and boolean values.
-Not all of the data is visible in the table, a large number of rows are truncated from view but what's visible gives a good idea of the typical data.
-The reviews are structured by splitting key information into different columns such as title, rating and text.
-This should ultimately make it easier to filter based on reviews with a certain rating or reviews with a specific keyword in the title.
-
-
-Question 2: What do you think of this output above - was this what you expected? Why or why not?
-
-The plain text version of the DataFrame is largely as I expected it to be.
-Although, I was expecting to see the same number of rows as depicted in the HTML version, around 10 rows instead of 5.
-I was also expecting the structure to perhaps use characters such as | or _ to group data and rows and for each row to be on the same line,
-rather than broken across multiple new lines.
-
-
-Question 3: Describe what we did to the pandas DataFrame in order to change how the outputs are reflected.
-
-To change how the DataFrame is output a few options were configured.
-A max_columns option was configured which makes sure all data columns are displayed.
-A width option, which provides more or less space for columns depending on the value used and a max_colwidth option which sets the width of columns and can make them bigger or smaller depending on preference.
-After making these configuration changes the data now fits within the output container, with a little overlapping between columns.
-Now also instead of seeing 5 rows, 10 rows are displayed.
-
-
-Question 4: Compare the Reviews Metadata dataset (the dataset immediately above this cell) and the Reviews dataset that you analyzed earlier.
-What are the differences between the 2 datasets?
-
-Comparing the two datasets there are some notable differences.
-Whilst there seems to be some overlap in column data labels such as title and images, the content is not the same.
-The second dataset consists of more columns than the first dataset and data which creates a better idea of what products the reviews relate to.
-The second dataset is more specialised around the product, featuring columns such as description, video, catagories and bought_together.
-Whereas the first dataset is more specialised on the review of products.
-To get the most useful information from both of these datasets I suspect there will need to be a union of the data they each provide.
-
-
-Question 5: Which data analysis method you find to be the most insightful or helpful?
-
-Out of the data analysis methods explored, I found the info method the most insightful.
-It provides a clear picture of what the columns are labeled, what the type is for the column and how many non empty values there are.
-This seems like it could be very useful for spotting gaps in data, or spotting a potential bias due to a lack of data in a certain area.
-It also seems useful for being able to run certain operations on columns knowing exactly what the types are, as
-depending whether something is a bool, string or int may mean a different approach of processing for each.
-In some cases data may look like one type but be another, e.g "24" looks like an int but could be a string.
-So being able to easily clarify the types saves running into issues with types later on.
-
-
-Question 6: What trend (if any) do you notice with price and frequency?
-
-The data seems to show a trend between price and frequency of rating.
-It appears that if the product is under 200 in price then there is more likely to be a rating, particularly if an item is around or under 35 in price.
-People are less likely to rate a product if the price is between 200 and around 1000 in price.
-Following this there does seem to be a slight trend that people will rate more expensive products that are priced above this point, however, not as frequently as those under around 60 - 70 in price.
-
-
-Question 7: What trend (if any) do you notice with price and rating?
-
-With regards to price and rating there seems to be some noticeable trends here.
-It seems if a product is somewhere around the 0 to 50/60 price point, then it is more like to be rated 4.5.
-The scatterplot graph shows a little cluster of plots around this point.
-It seems that no one rated a product 4.9 and just a few rated products as 5.0.
-People that paid less for their product are less likely to rate it higher.
-The people that paid over the 1000 price point are more likely to rate a product higher with the only rating being 5.0.
-So it could be assumed that a higher price gives the impression of a higher value or quality of the product.
+Question 1: The data structure consists of a number of columns. These columns include an index (which is unlabled), a rating, title, text, images, asin, parent_asin, user_id, timestamp, helpful_vote and verified_purchase. The data type varies from intigers, to decimals/floats, text, arrays (both empty and containing dictionaries or JSON) and boolean values. Not all of the data is visible in the table, a large number of rows are truncated from view but what's visible gives a good idea of the typical data. The reviews are structured by splitting key information into different columns such as title, rating and text. This should ultimately make it easier to filter based on reviews with a certain rating or reviews with a specific keyword in the title.
+Question 2: The plain text version of the DataFrame is largely as I expected it to be. Although, I was expecting to see the same number of rows as depicted in the HTML version, around 10 rows instead of 5. I was also expecting the structure to perhaps use characters such as | or _ to group data and rows and for each row to be on the same line, rather than broken across multiple new lines. 
+Question 3: To change how the DataFrame is output a few options were configured. A max_columns option was configured which makes sure all data columns are displayed. A width option, which provides more or less space for columns depending on the value used and a max_colwidth option which sets the width of columns and can make them bigger or smaller depending on preference. After making these configuration changes the data now fits within the output container, with a little overlapping between columns. Now also instead of seeing 5 rows, 10 rows are displayed.  
+Question 4: Comparing the two datasets there are some notable differences. Whilst there seems to be some overlap in column data labels such as title and images, the content is not the same. The second dataset consists of more columns than the first dataset and data which creates a better idea of what products the reviews relate to. The second dataset is more specialised around the product, featuring columns such as description, video, catagories and bought_together. Whereas the first dataset is more specialised on the review of products. To get the most useful information from both of these datasets I suspect there will need to be a union of the data they each provide.
+Question 5: Out of the data analysis methods explored, I found the info method the most insightful. It provides a clear picture of what the columns are labeled, what the type is for the column and how many non empty values there are. This seems like it could be very useful for spotting gaps in data, or spotting a potential bias due to a lack of data in a certain area. It also seems useful for being able to run certain operations on columns knowing exactly what the types are, as depending whether something is a bool, string or int may mean a different approach of processing for each. In some cases data may look like one type but be another, e.g "24" looks like an int but could be a string. So being able to easily clarify the types saves running into issues with types later on.
+Question 6: The data seems to show a trend between price and frequency of rating. It appears that if the product is under 200 in price then there is more likely to be a rating, particularly if an item is around or under 35 in price. People are less likely to rate a product if the price is between 200 and around 1000 in price. Following this there does seem to be a slight trend that people will rate more expensive products that are priced above this point, however, not as frequently as those under around 60 - 70 in price.  
+Question 7: With regards to price and rating there seems to be some noticeable trends here. It seems if a product is somewhere around the 0 to 50/60 price point, then it is more like to be rated 4.5. The scatterplot graph shows a little cluster of plots around this point. It seems that no one rated a product 4.9 and just a few rated products as 5.0. People that paid less for their product are less likely to rate it higher. The people that paid over the 1000 price point are more likely to rate a product higher with the only rating being 5.0. So it could be assumed that a higher price gives the impression of a higher value or quality of the product.
